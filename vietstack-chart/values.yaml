@@ -1,0 +1,21 @@
+# Default values for helm chart of Vietstack
+# This is a YAML formatted file
+
+replicaCount: 1
+image:
+  repository: tutj/testserver
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  name: testapiserver
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 80
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
